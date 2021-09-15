@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZA6-hE-DUt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="ngt-PR-JWg">
+            <objects>
+                <viewController id="ZA6-hE-DUt" customClass="MainViewController" customModule="Plant_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ar9-KK-zkO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1M-Ui-e7d">
+                                <rect key="frame" x="177" y="733" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2TF-S7-aek"/>
+                                    <constraint firstAttribute="width" secondItem="s1M-Ui-e7d" secondAttribute="height" multiplier="1:1" id="6eS-06-xWj"/>
+                                    <constraint firstAttribute="width" constant="60" id="IUX-2S-buy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="62"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="guo-HR-bCy" kind="presentation" id="Yzk-eK-S11"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OkD-2H-Gle">
+                                <rect key="frame" x="42" y="93" width="330" height="620"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="u3e-6z-A28"/>
+                                    <constraint firstAttribute="height" constant="620" id="yAy-uU-CJ7"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="15" minimumInteritemSpacing="15" id="jy6-dv-IVd">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlantCell" id="wJ8-C8-Kx4" customClass="PlantCollectionViewCell" customModule="Plant_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YbP-Y5-QF8">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4u-oE-zzR">
+                                                    <rect key="frame" x="29" y="42" width="42" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="plantCellLabel" destination="J4u-oE-zzR" id="ACX-uc-uPt"/>
+                                            <segue destination="crF-IM-WGY" kind="show" id="1gE-SO-TgB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="plus.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hgW-0X-mRF">
+                                <rect key="frame" x="91" y="722" width="60" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jWh-qy-4zu" firstAttribute="bottom" secondItem="s1M-Ui-e7d" secondAttribute="bottom" constant="20" id="VrU-Hv-wjj"/>
+                            <constraint firstItem="s1M-Ui-e7d" firstAttribute="centerX" secondItem="ar9-KK-zkO" secondAttribute="centerX" id="fZp-tP-dEI"/>
+                            <constraint firstItem="s1M-Ui-e7d" firstAttribute="top" secondItem="OkD-2H-Gle" secondAttribute="bottom" constant="20" id="oiT-yW-1hj"/>
+                            <constraint firstItem="OkD-2H-Gle" firstAttribute="centerX" secondItem="ar9-KK-zkO" secondAttribute="centerX" id="tQ7-hC-h1s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jWh-qy-4zu"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addPlantButton" destination="s1M-Ui-e7d" id="zSe-OL-xpa"/>
+                        <outlet property="plantCollectionView" destination="OkD-2H-Gle" id="Wfn-aW-CHh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aud-wJ-Msm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="109.82142857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gUH-dP-51a">
+            <objects>
+                <viewController id="crF-IM-WGY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ahk-be-6F2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hSs-bF-8Ik"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1wQ-ai-RwS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VvC-L6-Bzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="-154"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RBF-Y2-g5u">
+            <objects>
+                <viewController id="guo-HR-bCy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Gf-SV-k3R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="da1-YW-fMV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PY8-hO-CR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="529"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PlantArchitecture" representedClassName="PlantArchitecture" syncable="YES" codeGenerationType="category">
+        <attribute name="expectedWatering" optional="YES" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="species" optional="YES" attributeType="String"/>
+        <relationship name="waterDates" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="WaterDates" inverseName="plantArchitectureDate" inverseEntity="WaterDates"/>
+    </entity>
+    <entity name="WaterDates" representedClassName="WaterDates" syncable="YES" codeGenerationType="category">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="plantArchitectureDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlantArchitecture" inverseName="waterDates" inverseEntity="PlantArchitecture"/>
+    </entity>
+    <elements>
+        <element name="PlantArchitecture" positionX="-36" positionY="9" width="128" height="118"/>
+        <element name="WaterDates" positionX="222.34765625" positionY="89.3125" width="128" height="73"/>
+    </elements>
+</model>
